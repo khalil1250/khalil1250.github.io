@@ -46,7 +46,7 @@ function initializePortfolio() {
         card.hidden = category !== "all" && card.dataset.category !== category;
         if (!card.hidden) visibleCount += 1;
       }
-      document.querySelector("#project-status").textContent = `${visibleCount} projets affichés.`;
+      document.querySelector("#project-status").textContent = `${visibleCount} projects shown.`;
     });
   }
 
@@ -58,10 +58,10 @@ function initializePortfolio() {
     copyButton.addEventListener("click", async () => {
       try {
         await navigator.clipboard.writeText(emailLink.textContent.trim());
-        copyStatus.textContent = "Adresse copiée ! À bientôt.";
+        copyStatus.textContent = "Email address copied. Talk soon!";
       } catch {
         console.warn("[portfolio] Clipboard copy failed; direct email remains available.");
-        copyStatus.textContent = "Copie indisponible. Sélectionnez l’adresse ou cliquez dessus.";
+        copyStatus.textContent = "Copy unavailable. Select the email address or click it to get in touch.";
       }
     });
   }

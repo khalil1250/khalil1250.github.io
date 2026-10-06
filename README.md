@@ -1,6 +1,6 @@
 # Khalil Belharir — Personal website
 
-A French-language professional portfolio focused on software engineering, systems and machine learning. Built with semantic HTML, CSS and a small JavaScript enhancement layer. No installation, framework, build step, external font request or runtime dependency is required.
+An English-language professional portfolio focused on software engineering, systems and machine learning. Built with semantic HTML, CSS and a small JavaScript enhancement layer. No installation, framework, build step, external font request or runtime dependency is required.
 
 ## Preview
 
@@ -34,7 +34,7 @@ Publish the repository root as a static site. All internal URLs are relative, so
 
 ## Maintenance and privacy
 
-Edit public copy in the two HTML files and keep experience dates, availability and technologies consistent between them. Update the email address in both documents together; the clipboard control reads the visible address. Update this README for observable behavior or deployment changes.
+Keep all public copy in English, including metadata, accessibility labels, project details, interactive messages and the printable CV. Official company and institution names retain their spelling. Edit public copy in the two HTML files and keep experience dates, availability and technologies consistent between them. Update the email address in both documents together; the clipboard control reads the visible address. Update this README for observable behavior or deployment changes.
 
 No analytics, cookies, local storage, forms, API requests or third-party scripts are used. Email links open the visitor's email application; they do not submit a message automatically. Clipboard permission failures produce a fixed English console warning without personal data, and the page retains a direct email link. No navigation, filtering, copied data or visitor identifiers are logged. Static hosting may produce its own access logs outside this application's control.
 
@@ -43,3 +43,5 @@ No analytics, cookies, local storage, forms, API requests or third-party scripts
 Check desktop and mobile layouts, keyboard navigation, all section anchors, filters, expandable project details, email links, clipboard success/failure, the printable resume and operation without JavaScript. Check JavaScript syntax with `node --check script.js`. No PowerShell scripts are included.
 
 The initial release was visually checked at desktop, tablet and mobile sizes, including overflow checks at 320, 390, 768 and 1440 pixels. Project category counts (6/4/2), native detail expansion, mobile menu dismissal, Escape handling and clipboard success were verified in the browser. Static checks validated local asset paths, anchor targets, unique IDs, a single primary heading per document and exclusion of grades and private identifiers. The embedded preview browser opened a native print dialog; final PDF pagination should be verified in the recipient's browser. Cloudflare's build check confirmed the initial deployment succeeded.
+
+The English edition translates all public text, including search and social metadata, document language declarations, accessible labels, project-filter announcements and clipboard messages. This copy-only update introduces no new operational flow or external call; existing privacy-safe failure logging remains unchanged.
