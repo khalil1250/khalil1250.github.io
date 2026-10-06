@@ -68,12 +68,6 @@ function initializePortfolio() {
 
   const year = document.querySelector("#current-year");
   if (year) year.textContent = String(new Date().getFullYear());
-
-  const printButton = document.querySelector("#print-resume");
-  if (printButton) {
-    printButton.hidden = false;
-    printButton.addEventListener("click", () => window.print());
-  }
 }
 
 initializePortfolio();
