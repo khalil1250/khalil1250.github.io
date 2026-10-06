@@ -26,7 +26,9 @@ The portfolio is based on the CVs and academic documents supplied by its owner. 
 
 ## Hosting
 
-The deployment target is the owner's existing Cloudflare integration with the GitHub repository. For Cloudflare Pages, choose no framework, leave the build command empty and use the repository root (`/`) as the build output directory. The production branch is `main`. A push to that branch triggers the existing integration. `_headers` configures browser security headers on Cloudflare Pages, including a self-only content security policy and disabled network requests from the page. No new Cloudflare project is required by this repository.
+The deployment target is the owner's existing Cloudflare Workers Builds integration with the GitHub repository. The production branch is `main`; a push triggers the integration. `wrangler.jsonc` selects the existing `personal-website` Worker and configures the repository root as a static asset directory. The build command can remain empty and the deployment command is `npx wrangler deploy`. No Worker script or new Cloudflare project is required.
+
+`.assetsignore` explicitly permits only the public HTML, CSS, JavaScript, icon assets and header configuration. Git metadata, documentation, local configuration and future unrelated files are excluded from asset uploads. `_headers` configures browser security headers for static responses, including a self-only content security policy and disabled network requests from the page. See [Cloudflare's static asset configuration](https://developers.cloudflare.com/workers/static-assets/binding/) and [header configuration](https://developers.cloudflare.com/workers/static-assets/headers/).
 
 Publish the repository root as a static site. All internal URLs are relative, so the portfolio also works under a path such as `/personal-website/`. There is no build command. Serve `index.html` as the entry point and keep `cv.html`, `styles.css`, `script.js` and `assets/` at their existing relative paths. `.nojekyll` allows direct static hosting on GitHub Pages.
 
@@ -39,3 +41,5 @@ No analytics, cookies, local storage, forms, API requests or third-party scripts
 ## Verification
 
 Check desktop and mobile layouts, keyboard navigation, all section anchors, filters, expandable project details, email links, clipboard success/failure, the printable resume and operation without JavaScript. Check JavaScript syntax with `node --check script.js`. No PowerShell scripts are included.
+
+The initial release was visually checked at desktop, tablet and mobile sizes, including overflow checks at 320, 390, 768 and 1440 pixels. Project category counts (6/4/2), native detail expansion, mobile menu dismissal, Escape handling and clipboard success were verified in the browser. Static checks validated local asset paths, anchor targets, unique IDs, a single primary heading per document and exclusion of grades and private identifiers. The embedded preview browser opened a native print dialog; final PDF pagination should be verified in the recipient's browser. Cloudflare's build check confirmed the initial deployment succeeded.
